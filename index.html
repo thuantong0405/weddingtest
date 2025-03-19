@@ -40,7 +40,7 @@
 
 
         <!-- Navbar start -->
-        <div class="container-fluid sticky-top px-0">
+        <div class="container-fluid sticky-top px-0 fixed-top">
             <div class="container-fluid">
                 <div class="container px-0">
                     <nav class="navbar navbar-light navbar-expand-xl" id="navBar">
@@ -52,11 +52,13 @@
                         </button>
                         <div class="collapse navbar-collapse py-3" id="navbarCollapse">
                             <div class="navbar-nav mx-auto border-top">
-                                <a href="#weddingAbout" class="nav-item nav-link">About</a>
-                                <a href="#weddingStory" class="nav-item nav-link">Story</a>
-                                <a href="#weddingTimeline" class="nav-item nav-link">Timeline</a>
-                                <a href="#weddingGallery" class="nav-item nav-link">Gallery</a>
-                                <a href="#weddingRsvp" class="nav-item nav-link">RSVP</a>
+                                <a href="#weddingAbout" class="nav-item nav-link"  data-bs-toggle="collapse" data-bs-target="#navbarCollapse">Cặp đôi</a>
+                                <!-- <a href="#weddingStory" class="nav-item nav-link">Story</a>
+                                <a href="#weddingTimeline" class="nav-item nav-link">Timeline</a> -->
+                                <a href="#weddingEvent" class="nav-item nav-link">Sự kiện cưới</a>
+                                <a href="#weddingGallery" class="nav-item nav-link">Album hình cưới</a>
+                                <a href="#weddingGestBook" class="nav-item nav-link">Sổ lưu bút</a>
+                                <a href="#weddingQR" class="nav-item nav-link">Mừng cưới</a>
                             </div>
                             <div class="d-flex align-items-center flex-nowrap pt-xl-0">
                                 <a href="#weddingRsvp" class="btn btn-primary btn-primary-outline-0 py-2 px-4 ms-4">Book Attendance</a>
@@ -295,7 +297,7 @@
         </div> -->
         <!-- Wedding Date -->
         <!-- About Start -->
-        <div class="container-fluid position-relative overflow-hidden bg-secondary py-5" >
+        <div class="container-fluid position-relative overflow-hidden bg-secondary py-5" id="weddingEvent">
             <img src="img/bg-flower.png" class="img-fluid position-absolute top-0" style="right: -15px; transform: rotate(270deg); opacity: 0.5;" alt="">
             <img src="img/bg-flower.png" class="img-fluid position-absolute" style="bottom: 10px; left: -15px; transform: rotate(90deg); opacity: 0.5;" alt="">
             <div class="container py-5 position-relative">
@@ -1248,9 +1250,22 @@
             </div>
         </div>
         <!-- Copyright End -->
+    <!-- Nút góc dưới bên phải -->
+    <button class="btn btn-primary btn-fixed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseButtons" aria-expanded="false" aria-controls="collapseButtons">
+        Hiển Thị Nút Thêm
+    </button>
+
+    <!-- Các nút trong collapse -->
+    <div class="collapse" id="collapseButtons">
+        <div class="btn-group-vertical btn-fixed" style="position: fixed; bottom: 100px; right: 20px;">
+            <button class="btn btn-secondary mb-2">Nút 1</button>
+            <button class="btn btn-secondary mb-2">Nút 2</button>
+            <button class="btn btn-secondary mb-2">Nút 3</button>
+        </div>
+    </div>
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+        <!-- <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>    -->
           <!-- Nút phát/tắt âm thanh -->
           <div class="music-btn" id="music-btn">
             <span>🎵</span>

@@ -422,3 +422,17 @@
   }
 }
 
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+.btn-fixed {
+  position: fixed;
+  bottom: 20px; /* Cách đáy màn hình 20px */
+  right: 20px; /* Cách bên phải màn hình 20px */
+  z-index: 1050; /* Đảm bảo nút nổi lên trên các phần tử khác */
+}
