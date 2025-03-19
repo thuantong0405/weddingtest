@@ -29,3 +29,24 @@
       transform: scale(1);
     }
   }
+
+  .music-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #ff4081;
+    color: white;
+    font-size: 24px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .music-btn:hover {
+    background-color: #f50057;
+  }

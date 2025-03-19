@@ -1,3 +1,6 @@
+    // Lấy phần tử nút và phần tử âm thanh
+    const $musicBtn = $('#music-btn');
+    const $audio = $('#audio');
 (function ($) {
     "use strict";
     AOS.init();
@@ -56,5 +59,44 @@
         return false;
     }); 
 
+
+
+    // Biến để kiểm tra trạng thái phát nhạc
+    let isPlaying = false;
+
+    // Khi người dùng click vào nút
+    $('#music-btn').click(function () {
+        console.log("aaaa1")
+        if (isPlaying) {
+            // Tắt âm thanh
+            $musicBtn.html('🎵'); // Đổi lại biểu tượng
+            $audio[0].pause();
+            //$audio[0].currentTime = 0; // Reset lại bài hát khi tắt
+        } else {
+            $audio[0].play();
+            // Phát âm thanh
+            $musicBtn.html('🔇'); // Đổi biểu tượng khi đang phát nhạc
+        }
+
+        // Đổi trạng thái phát/tắt âm thanh
+        isPlaying = !isPlaying;
+    });
+    // $('#music-btn').trigger( "click" );
 })(jQuery);
 
+
+    // Biến để theo dõi sự kiện tương tác người dùng
+    let isInteracted = false;
+
+    // Lắng nghe sự kiện tương tác của người dùng (click vào trang hoặc nút)
+    $(document).on('click keydown mousemove', function () {
+        console.log("dd");
+        if (!isInteracted) {
+            // Nếu chưa có tương tác, cho phép phát nhạc
+            $audio[0].play().catch(function (error) {
+                // Nếu trình duyệt chặn, không làm gì
+                console.log('Không thể phát nhạc:', error);
+            });
+            isInteracted = true; // Đánh dấu là đã có tương tác
+        }
+    });
