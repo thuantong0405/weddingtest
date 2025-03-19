@@ -120,19 +120,27 @@
     border-radius: 50%;
 }
 
+@media (max-width: 1199px) {
+  .invitation-section .invitation-box {
+    max-width: 700px;
+    margin: 20px auto;
+    height: auto!important;
+  }
+}
+
 @media (max-width: 991px) {
   .invitation-section .invitation-box {
-    max-width: 500px;
-    margin: 50px auto;
+    max-width: 700px;
+    margin: 20px auto;
     height: auto!important;
   }
 }
 
 @media (max-width: 767px) {
   .invitation-section .invitation-box {
-    /*max-width: 300px;*/
+    max-width: 600px;
     padding: 50px 40px;
-    margin: 50px auto;
+    margin: 20px auto;
   }
   
   .invitation-section .invitation-box.left {margin-top:0;}
@@ -352,7 +360,7 @@
   width: 100px;
   height: 100px;
   /* background: rgba(241, 78, 149, 0.8); */
-  margin: 0 4px;
+  /* margin: 0 4px; */
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -388,7 +396,7 @@
 }
 
 .simply-countdown > .simply-section .simply-amount {
-  font-size: 30px;
+  font-size: 25px;
   /* amounts */
 }
 
