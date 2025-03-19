@@ -14,11 +14,6 @@ let isPlaying = false;
         }, 1);
     };
     spinner(0);
-    
-    
-    // Initiate the wowjs
-    new WOW().init();
-
 
     // Fixed Navbar
     $(window).scroll(function () {
@@ -37,7 +32,7 @@ let isPlaying = false;
             
             $('html, body').animate({
                 scrollTop: $(this.hash).offset().top - 90
-            }, 1500, 'easeInOutExpo');
+            }, 800, 'easeInOutExpo');
             
             if ($(this).parents('.navbar-nav').length) {
                 $('.navbar-nav .active').removeClass('active');
@@ -59,15 +54,30 @@ let isPlaying = false;
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     }); 
+
+    let d = new Date(2025, 3, 13); 
+     // default example
+     simplyCountdown('.simply-countdown-one', {
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate()
+    });
+
+    //jQuery example
+    $('#simply-countdown-losange').simplyCountdown({
+        year: d.getFullYear(),
+        month: d.getMonth() + 1,
+        day: d.getDate(),
+        enableUtc: false
+    });
+
     isPlaying = false;
+
     $('#music-btn').html('🔇');
-
-
 
     // Khi người dùng click vào nút
     $('#music-btn').click(function () {
-        console.log("aaaa1");
-        console.log(isPlaying)
+
         if (isPlaying) {
             // Tắt âm thanh
             $('#music-btn').html('🔇'); // Đổi biểu tượng khi đang phát nhạc
